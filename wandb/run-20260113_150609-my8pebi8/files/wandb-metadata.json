@@ -1,0 +1,28 @@
+{
+  "os":  "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "python":  "CPython 3.11.14",
+  "startedAt":  "2026-01-13T14:06:09.296701Z",
+  "program":  "/home/arman/Mlops/Mlops_practice_cookie/src/my_project/train.py",
+  "codePath":  "src/my_project/train.py",
+  "codePathLocal":  "src/my_project/train.py",
+  "git":  {
+    "remote":  "https://github.com/armandgatius/Mlops_practice_cookie.git",
+    "commit":  "541c0328be7bccf8b4d18ca11450f7483c232107"
+  },
+  "email":  "armandgatiusugalde@gmail.com",
+  "root":  "/home/arman/Mlops/Mlops_practice_cookie",
+  "host":  "ArmandHP",
+  "executable":  "/home/arman/miniconda3/envs/mlops/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "disk":  {
+    "/":  {
+      "total":  "1081101176832",
+      "used":  "29845270528"
+    }
+  },
+  "memory":  {
+    "total":  "7967272960"
+  },
+  "writerId":  "ebakr7w9h1jhaau3xi126vap530fwcz3"
+}
