@@ -3,6 +3,26 @@ import torch
 import typer
 from data import corrupt_mnist
 from model import MyAwesomeModel
+import hydra
+from omegaconf import DictConfig
+
+import random
+import numpy as np
+import torch
+
+def set_seed(seed: int):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+
+@hydra.main(version_base="1.2", config_path="../../configs", config_name="config")
+def main(cfg: DictConfig):
+    print(cfg.training.batch_size)      # 32
+    print(cfg.training.learning_rate)   # 0.001
+    print(cfg.model.hidden_size)        # 128
+    print(cfg.seed)                     # 42
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
@@ -49,4 +69,4 @@ def train(lr: float = 1e-3, batch_size: int = 32, epochs: int = 10) -> None:
 
 
 if __name__ == "__main__":
-    typer.run(train)
+    main()
